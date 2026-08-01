@@ -1,5 +1,7 @@
+// Grid boundaries defining the SVG map canvas scale
 export const MAP_SIZE = { width: 800, height: 500 };
 
+// Available merchants and restaurants with coordinates (x, y) relative to MAP_SIZE
 export const STORES = [
   {
     id: 'store_1',
