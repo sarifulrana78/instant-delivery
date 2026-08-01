@@ -81,3 +81,5 @@ export const RIDERS = [
   { id: 'rider_2', name: 'Sarah', avatar: '🛴', type: 'Electric Scooter', rating: 4.8, speed: 1.6 },
   { id: 'rider_3', name: 'Carlos', avatar: '🏍️', type: 'Motorcycle', rating: 4.7, speed: 2.2 }
 ];
+
+export const START_COORDINATES = { x: 400, y: 250 };
