@@ -2,6 +2,16 @@ import React from 'react';
 import Map from './Map';
 import './AdminPanel.css';
 
+/**
+ * AdminPanel Component
+ * Renders the Operations Administration view with live analytics metrics and real-time operations logging.
+ * 
+ * @param {Object} props
+ * @param {Array} props.activeOrders - List of currently active orders in simulation
+ * @param {Array} props.allOrders - Historical list of all placed orders
+ * @param {Array} props.logs - System operations events logs
+ * @param {string} props.selectedRiderId - Currently selected rider ID for tracking
+ */
 function AdminPanel({ activeOrders, allOrders, logs, selectedRiderId }) {
   // Compute metrics
   const totalRevenue = allOrders.reduce((sum, order) => sum + order.totalAmount, 0);
