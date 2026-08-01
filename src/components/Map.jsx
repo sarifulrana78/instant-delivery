@@ -2,6 +2,14 @@ import React from 'react';
 import { MAP_SIZE, STORES, HOUSES } from '../utils/mockData';
 import './Map.css';
 
+/**
+ * Map Component
+ * Renders an SVG telemetry map displaying all active stores, delivery houses, and real-time courier paths.
+ * 
+ * @param {Object} props
+ * @param {Array} props.activeOrders - List of currently active orders in simulation
+ * @param {string} props.selectedRiderId - The ID of the currently selected rider to highlight on the map
+ */
 function Map({ activeOrders, selectedRiderId }) {
   // Let's render the streets or background grid
   const gridLines = [];
