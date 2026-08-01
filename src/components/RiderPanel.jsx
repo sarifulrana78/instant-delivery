@@ -2,6 +2,19 @@ import React from 'react';
 import { RIDERS, STORES, HOUSES } from '../utils/mockData';
 import './RiderPanel.css';
 
+/**
+ * RiderPanel Component
+ * Renders the Rider view panel including current active jobs, statistics, and simulation speeds.
+ * 
+ * @param {Object} props
+ * @param {string} props.selectedRiderId - Currently selected rider ID
+ * @param {Function} props.setSelectedRiderId - Handler to change active rider
+ * @param {Array} props.activeOrders - List of active simulation orders
+ * @param {Object} props.riderStats - Earnings and delivery counts statistics map
+ * @param {Function} props.onSimulateTick - Action callback to manually step the simulation
+ * @param {number} props.simulationSpeed - Current speed factor
+ * @param {Function} props.setSimulationSpeed - Handler to change speed factor
+ */
 function RiderPanel({ 
   selectedRiderId, 
   setSelectedRiderId, 
