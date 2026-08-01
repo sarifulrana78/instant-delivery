@@ -193,3 +193,40 @@ a {
 .glow-effect {
   animation: pulse-glow 2s infinite ease-in-out;
 }
+
+/* App Main Layout */
+.main-content-layout {
+  max-width: 1400px;
+  width: calc(100% - 3rem);
+  margin: 0 auto 3rem auto;
+  position: relative;
+  z-index: 10;
+}
+
+.customer-view-grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.right-panel {
+  position: sticky;
+  top: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .customer-view-grid {
+    grid-template-columns: 1fr;
+  }
+  .right-panel {
+    position: static;
+  }
+}
+

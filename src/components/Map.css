@@ -1,0 +1,158 @@
+.map-canvas-container {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.map-canvas-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.map-live-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--success);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--success);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--success);
+  animation: dot-pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes dot-pulse {
+  0%, 100% { opacity: 0.4; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+.map-viewport {
+  background: rgba(5, 5, 10, 0.4);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 800/500;
+}
+
+.map-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.map-grid-line {
+  stroke: rgba(255, 255, 255, 0.02);
+  stroke-width: 1.5;
+}
+
+.delivery-path {
+  fill: none;
+  stroke-dasharray: 6, 4;
+  stroke-width: 2.5;
+  animation: dash-travel 30s linear infinite;
+}
+
+.delivery-path.rider-to-store {
+  stroke: var(--secondary);
+  opacity: 0.5;
+}
+
+.delivery-path.store-to-house {
+  stroke: var(--primary);
+  opacity: 0.3;
+}
+
+.delivery-path.active-delivery {
+  opacity: 0.8;
+  stroke-width: 3;
+}
+
+@keyframes dash-travel {
+  to {
+    stroke-dashoffset: -1000;
+  }
+}
+
+.map-node {
+  transition: transform var(--transition-normal);
+}
+
+.map-node:hover {
+  transform: scale(1.1);
+}
+
+.house-marker-bg {
+  fill: #1e293b;
+  stroke: rgba(255, 255, 255, 0.15);
+  stroke-width: 2;
+}
+
+.store-marker-bg {
+  fill: #11131c;
+  stroke-width: 2.5;
+}
+
+.node-icon {
+  text-anchor: middle;
+  font-size: 1.25rem;
+  pointer-events: none;
+  user-select: none;
+}
+
+.node-label {
+  text-anchor: middle;
+  font-size: 0.7rem;
+  font-weight: 600;
+  fill: var(--text-secondary);
+  pointer-events: none;
+  user-select: none;
+}
+
+.store-label {
+  fill: var(--text-primary);
+}
+
+.rider-marker {
+  transition: transform var(--transition-fast);
+}
+
+.rider-marker-bg {
+  fill: var(--bg-tertiary);
+  stroke: var(--secondary);
+  stroke-width: 2;
+  filter: drop-shadow(0 0 6px var(--secondary-glow));
+}
+
+.rider-marker.selected .rider-marker-bg {
+  stroke: var(--accent);
+  stroke-width: 3;
+  filter: drop-shadow(0 0 10px rgba(236, 72, 153, 0.6));
+}
+
+.rider-icon {
+  text-anchor: middle;
+  font-size: 1.1rem;
+  pointer-events: none;
+  user-select: none;
+}
+
+.rider-label {
+  text-anchor: middle;
+  font-size: 0.75rem;
+  font-weight: 700;
+  fill: var(--text-primary);
+  background: var(--bg-primary);
+  pointer-events: none;
+  user-select: none;
+}

@@ -1,0 +1,335 @@
+.rider-panel-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.rider-selector-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.rider-tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: var(--radius-md);
+  text-align: left;
+  border-color: transparent;
+}
+
+.rider-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.rider-tab-btn.active {
+  background: rgba(6, 182, 212, 0.08);
+  border-color: var(--secondary);
+  box-shadow: 0 4px 20px rgba(6, 182, 212, 0.15);
+}
+
+.rider-tab-avatar {
+  font-size: 2rem;
+}
+
+.rider-tab-meta h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.rider-tab-meta span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.rider-dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.rider-card {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.rider-card h3 {
+  font-size: 1.25rem;
+  border-bottom: 1px solid var(--glass-border);
+  padding-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+
+.rider-profile-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.profile-large-avatar {
+  font-size: 3.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--glass-border);
+}
+
+.profile-meta h2 {
+  font-size: 1.75rem;
+}
+
+.profile-meta .badge {
+  display: inline-block;
+  font-size: 0.8rem;
+  padding: 0.2rem 0.6rem;
+  background: rgba(6, 182, 212, 0.15);
+  color: var(--secondary);
+  border-radius: var(--radius-full);
+  margin-right: 0.5rem;
+  font-weight: 600;
+}
+
+.profile-meta .rating {
+  font-size: 0.85rem;
+  color: var(--warning);
+  font-weight: 500;
+}
+
+.stats-metric-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.metric-box {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  text-align: center;
+}
+
+.metric-title {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.metric-value {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.simulation-settings-box {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px dashed var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.speed-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.speed-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.speed-btn {
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: var(--transition-fast);
+}
+
+.speed-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.speed-btn.active {
+  background: var(--primary);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 0 10px var(--primary-glow);
+}
+
+/* Job Details styling */
+.active-job-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.job-status-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status-badge {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+}
+
+.status-badge.placed {
+  background: rgba(245, 158, 11, 0.15);
+  color: var(--warning);
+}
+
+.status-badge.preparing {
+  background: rgba(99, 102, 241, 0.15);
+  color: var(--primary);
+}
+
+.status-badge.delivering {
+  background: rgba(6, 182, 212, 0.15);
+  color: var(--secondary);
+}
+
+.job-route-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  position: relative;
+  padding-left: 0.5rem;
+}
+
+.timeline-stop {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 2;
+}
+
+.stop-marker {
+  width: 32px;
+  height: 32px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--glass-border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.stop-marker.store {
+  border-color: var(--primary);
+  box-shadow: 0 0 8px var(--primary-glow);
+}
+
+.stop-marker.customer {
+  border-color: var(--secondary);
+  box-shadow: 0 0 8px var(--secondary-glow);
+}
+
+.stop-info h5 {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.stop-info p {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.timeline-connector {
+  position: absolute;
+  left: 20px;
+  top: 32px;
+  bottom: 32px;
+  width: 3px;
+  background: rgba(255, 255, 255, 0.05);
+  z-index: 1;
+}
+
+.connector-progress {
+  width: 100%;
+  background: linear-gradient(to bottom, var(--primary), var(--secondary));
+  transition: height 0.3s ease;
+}
+
+.job-progress-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.progress-text {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.progress-bar-bg {
+  width: 100%;
+  height: 8px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  border-radius: var(--radius-full);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.action-btn {
+  width: 100%;
+  padding: 0.85rem;
+}
+
+.no-active-job {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.5rem;
+  text-align: center;
+  color: var(--text-secondary);
+  gap: 0.5rem;
+}
+
+.no-job-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.no-active-job p {
+  font-size: 0.85rem;
+  max-width: 280px;
+}

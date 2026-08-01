@@ -1,0 +1,160 @@
+.admin-panel-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.admin-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.metric-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+}
+
+.metric-card.revenue {
+  border-left: 4px solid var(--success);
+}
+
+.metric-card.active-jobs {
+  border-left: 4px solid var(--secondary);
+}
+
+.metric-card.time {
+  border-left: 4px solid var(--primary);
+}
+
+.metric-card.success {
+  border-left: 4px solid var(--accent);
+}
+
+.metric-icon {
+  font-size: 2rem;
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.03);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--glass-border);
+}
+
+.metric-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-details .label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.metric-details h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.admin-layout-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 1.5rem;
+  min-height: 500px;
+}
+
+.admin-map-column {
+  width: 100%;
+}
+
+.admin-logs-column {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100%;
+  max-height: 575px;
+}
+
+.logs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--glass-border);
+  padding-bottom: 0.75rem;
+}
+
+.logs-header h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.log-count {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+}
+
+.logs-terminal {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.85rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.log-entry {
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.log-entry.info {
+  color: var(--text-secondary);
+}
+
+.log-entry.success {
+  color: var(--success);
+}
+
+.log-entry.warning {
+  color: var(--warning);
+}
+
+.log-entry.danger {
+  color: var(--danger);
+}
+
+.log-time {
+  color: var(--text-muted);
+  margin-right: 0.5rem;
+}
+
+.no-logs {
+  color: var(--text-muted);
+  font-style: italic;
+  padding: 2rem 0;
+}
+
+.console-prompt {
+  color: var(--secondary);
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
